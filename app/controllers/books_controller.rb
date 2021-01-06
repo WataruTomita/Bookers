@@ -19,7 +19,7 @@ class BooksController < ApplicationController
     if book.save
       redirect_to book_path(book)
     else
-      # render action: :index
+      # render action: :
       redirect_to books_path
     end
     # ここから

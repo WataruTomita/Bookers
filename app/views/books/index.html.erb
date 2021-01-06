@@ -1,6 +1,5 @@
 <h2>Books#index</h2>
-<p>Find me in app/views/books/new.html.erb</p>
-
+<!--<p>Find me in app/views/books/new.html.erb</p>-->
 <% @books.each do |book| %>
     <div class="box">
         <span><%= book.title %></span>
@@ -10,7 +9,6 @@
         <span><%= link_to "Destroy", book_path(book), method: :delete %></span>
     </div>
 <% end %>
-
 <h2>New Book</h2>
 <%= form_with model:@book, local:true do |f| %>
     <h4>Title</h4>
