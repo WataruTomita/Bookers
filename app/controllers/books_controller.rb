@@ -15,10 +15,18 @@ class BooksController < ApplicationController
   # ↑ここまで
 
   def create
-    # @book = Book.new(book_params)
+    # binding.pry
     book = Book.new(book_params)
-    book.save
-    redirect_to books_path(book)
+    # ここから
+    # book = Book.new(book_params)
+    # book.save
+    # redirect_to books_path(book)
+    # ここまで　動作確認済み。触らない。
+    if book.save
+      redirect_to book_path(book)
+    else
+      render action: :new
+    end
     # if @book.save
       # redirect_to book_path(book)
     # else

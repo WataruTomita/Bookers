@@ -8,10 +8,3 @@
   <%= f.text_area :body %>
   <%= f.submit 'Creat Book' %>
 <% end %>
-
-<!--  memo -->
-    <% if @books.errors.any? %>
-        <%= @books.errors.count %> Error!
-        <% @books.errors.full_messages.each do |message| %>
-        <%= message %>
-    <% end %>
