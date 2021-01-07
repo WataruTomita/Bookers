@@ -4,6 +4,16 @@
 <% end %>
 <!-- 通知ここまで -->
 <h1>Editing Book</h1>
+<% if @book.errors.any? %>
+    <div id="error_explanation">
+        <%= @book.errors.count %>errors prohibited this book from being saved:<br>
+        <ul>
+            <% @book.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
 <%= form_with model:@book, local: true do |f| %>
     <p>Title</p>
     <%= f.text_field :title %>
