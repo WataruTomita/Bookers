@@ -1,18 +1,33 @@
+<!-- 投稿成功通知 -->
 <% if flash[:notice] %>
-    <div class="flash"><%= flash[:notice] %></div>
+    <p class="flash"><%= flash[:notice] %></p>
 <% end %>
-<h2>Books#index</h2>
-<!--<p>Find me in app/views/books/new.html.erb</p>-->
-<% @books.each do |book| %>
-    <div class="box">
-        <span><%= book.title %></span>
-        <span><%= book.body %></span>
-        <span><%= link_to "Show", book_path(book) %></span>
-        <span><%= link_to "Edit", edit_book_path(book) %></span>
-        <span><%= link_to "Destroy", book_path(book), method: :delete, data: {confirm: "Are you sure?"} %></span>
-    </div>
-<% end %>
-<h2>New Book</h2>
+<!-- 通知ここまで -->
+<h1>Books</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Menu</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @books.each do |book| %>
+            <tr>
+                <td><%= book.title %></td>
+                <td><%= book.body %></td>
+                <td>
+                    <%= link_to "Show", book_path(book) %>
+                    <%= link_to "Edit", edit_book_path(book) %>
+                    <%= link_to "Destroy", book_path(book), method: :delete, data: {confirm: "Are you sure?"} %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<h2>New book</h2>
 <%= form_with model:@book, local:true do |f| %>
 <%# ここから %>
     <% if @book.errors.any? %>

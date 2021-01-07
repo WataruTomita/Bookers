@@ -13,11 +13,33 @@
  *= require_tree .
  *= require_self
  */
+ /* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    margin: 33px;
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
+p {
+    margin: 33px;
+}
+
+th {
+    padding-bottom: 5px;
+}
+td {
+    padding: 0px 5px 7px;
+}
+.flash {
+    color: green;
+}
+
+/* エラーメッセージウインドウ */
 .alert {
     color: #262626;
     background: #FFEBE8;
@@ -30,3 +52,4 @@ div.field_with_errors {
     background-color: red;
     padding: 2px;
 }
+/* エラーメッセージウインドウ ここまで */

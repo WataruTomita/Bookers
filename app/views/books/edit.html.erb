@@ -1,6 +1,8 @@
+<!-- 更新成功通知 -->
 <% if flash[:notice] %>
-    <div class="flash"><%= flash[:notice] %></div>
+    <p class="flash"><%= flash[:notice] %></p>
 <% end %>
+<!-- 通知ここまで -->
 <h1>Editing Book</h1>
 <%= form_with model:@book, local: true do |f| %>
     <p>Title</p>
