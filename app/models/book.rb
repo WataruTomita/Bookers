@@ -1,4 +1,5 @@
 class Book < ApplicationRecord
-    # validates :title, presence: true
-    # validates :body, presence: true
+# 個別modelに対して適用
+    validates :title, presence: true
+    validates :body, presence: true
 end

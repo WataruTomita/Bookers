@@ -1,5 +1,4 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
-    validates :title, presence: true
-    validates :body, presence: true
+  # 全部のmodelに対して適用
 end
