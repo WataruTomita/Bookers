@@ -16,6 +16,8 @@ class BooksController < ApplicationController
     @books = Book.all
     @book = Book.new(book_params)
     if @book.save
+      # 投稿に成功した場合のメッセージ
+      flash[:notice] = "Book was successfully created."
       redirect_to book_path(@book)
     else
       # renderの場合はindex controllerを通らないので、個別に取得したいものを指定しておくこと！（rb:16,17）

@@ -6,7 +6,7 @@
         <span><%= book.body %></span>
         <span><%= link_to "Show", book_path(book) %></span>
         <span><%= link_to "Edit", edit_book_path(book) %></span>
-        <span><%= link_to "Destroy", book_path(book), method: :delete %></span>
+        <span><%= link_to "Destroy", book_path(book), method: :delete, data: {confirm: "Are you sure?"} %></span>
     </div>
 <% end %>
 <h2>New Book</h2>
