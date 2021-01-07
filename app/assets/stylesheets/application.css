@@ -22,34 +22,37 @@
 
 body {
     margin: 33px;
+    font-size: 13px;
     font-family: verdana, arial, helvetica, sans-serif;
 }
-
+h1 {
+    margin: 15px 0px;
+}
+h2 {
+    margin: 15px 0px;
+}
 p {
     margin: 33px;
 }
-
 th {
     padding-bottom: 5px;
 }
 td {
     padding: 0px 5px 7px;
 }
+label {
+    display: block;
+}
 .flash {
     color: green;
 }
-
-/* エラーメッセージウインドウ */
-.alert {
-    color: #262626;
-    background: #FFEBE8;
-    text-align: center;
-    border: 2px solid #990000;
-    padding: 12px;
-    font-weight: 800;
+.box-area {
+    margin-bottom: 10px;
 }
+/* エラーメッセージウインドウ */
 div.field_with_errors {
     background-color: red;
     padding: 2px;
+    display: table;
 }
 /* エラーメッセージウインドウ ここまで */
