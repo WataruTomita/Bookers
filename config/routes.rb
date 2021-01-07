@@ -3,6 +3,4 @@ Rails.application.routes.draw do
   resources :books
   # top page
   root to: 'books#top'
-  # post 'creater_books' => 'books#create'
-  # get 'books' => 'books#create'
 end
